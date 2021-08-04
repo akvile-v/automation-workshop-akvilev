@@ -1,0 +1,27 @@
+{
+  "name": "automation-workshop-akvilev",
+  "version": "1.0.0",
+  "description": "My first test, checking that everything is working",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akvile-v/automation-workshop-akvilev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akvile-v/automation-workshop-akvilev/issues"
+  },
+  "homepage": "https://github.com/akvile-v/automation-workshop-akvilev#readme",
+  "dependencies": {
+    "@playwright/test": "^1.13.1",
+    "allure": "0.0.0",
+    "allure-commandline": "^2.13.8",
+    "experimental-allure-playwright": "0.0.3",
+    "g": "^2.0.1"
+  }
+}
