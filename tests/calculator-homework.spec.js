@@ -23,14 +23,13 @@ buildSelector.forEach(calculatorBuild => {
     });
 
     test.only(`Testing calculator build ${calculatorBuild} simple calculations`, async () => {
-      const dropdownObjects = ['0', '1', '2', '3', '4'];
       let num1 = Math.floor(Math.random() * 50) + 1;
       let num2 = Math.floor(Math.random() * 50) + 1;
       for (let i = 0; i < 5; i++) {
-        await startPage.simpleCalculation(num1.toString(), num2.toString(), dropdownObjects[i]);
+        await startPage.simpleCalculation(num1.toString(), num2.toString(), i.toString());
         let expectedValue = num1 + num2;
         const answerFieldResults = await page.inputValue('#numberAnswerField');
-        switch (dropdownObjects[i]) {
+        switch (i.toString()) {
           case '1':
             expectedValue = num1 - num2;
             break;
