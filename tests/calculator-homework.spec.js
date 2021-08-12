@@ -77,33 +77,3 @@ buildSelector.forEach(calculatorBuild => {
 
   });
 });
-
-/*test('Testing calculations with negative numbers', async ({page}) => {
-    await page.goto('https://testsheepnz.github.io/BasicCalculator')
-    await page.fill('#number1Field', '-100');
-    await page.fill('#number2Field', '-123');
-    const DropdownObjects = ['0', '1', '2', '3', '4'];
-    let ExpectedValue = (-100) + (-123);
-    for (let i = 0; i < 5; i++) {
-      await page.selectOption('select#selectOperationDropdown', DropdownObjects[i]);
-      await page.click('#calculateButton');
-      const AnswerFieldResults = await page.inputValue('#numberAnswerField');
-      if (DropdownObjects[i] == '1'){ ExpectedValue = (-100) - (-123);}
-        else if (DropdownObjects[i] == '2') { ExpectedValue = (-100) * (-123);}
-          else if (DropdownObjects[i] == '3') { ExpectedValue = (-100) / (-123);}
-            else if (DropdownObjects[i] == '4'){  ExpectedValue = '-100-123';}
-      expect(AnswerFieldResults).toBe("" + ExpectedValue + "");
-    }
-  });
-test('Test for testing', async ({page}) => {
-    await page.goto('https://testsheepnz.github.io/BasicCalculator')
-    //await page.click('#selectBuild');
-    await page.selectOption('select#selectBuild', '1');
-    await page.fill('#number1Field', '5');
-    await page.fill('#number2Field', '7');
-    await page.selectOption('select#selectOperationDropdown', '1');
-    await page.click('#calculateButton');
-      const AnswerFieldResults = await page.inputValue('#numberAnswerField');
-      const ExpectedValue = 5-7;
-      expect(AnswerFieldResults).toBe("" + ExpectedValue + "");
-    }); */
