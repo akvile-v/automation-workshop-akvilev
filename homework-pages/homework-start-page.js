@@ -2,7 +2,6 @@ exports.HomeworkStartPage = class HomeworkStartPage {
     constructor(page){
         this.page = page;
     }
-
     async goto(buildNumber) {
         await this.page.goto('https://testsheepnz.github.io/BasicCalculator');
         await this.page.selectOption('select#selectBuild', buildNumber);
@@ -12,6 +11,9 @@ exports.HomeworkStartPage = class HomeworkStartPage {
         await this.page.fill('#number2Field', number2);
         await this.page.selectOption('select#selectOperationDropdown', selection);
         await this.page.click('#calculateButton');
+    }
+    get answerField(){
+        return '#numberAnswerField';
     }
 
 }
